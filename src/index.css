@@ -1,14 +1,127 @@
 @import "tailwindcss";
+@import "@fontsource-variable/geist";
+@import "@fontsource-variable/geist-mono";
 
-@theme {
-  --color-accent: var(--color-emerald-600);
-  --color-accent-hover: var(--color-emerald-700);
+/* Design tokens. Light is the canonical palette; dark swaps the paper/ink roles. */
+:root {
+  --paper: #f4f2ec;
+  --paper-2: #fbfaf7;
+  --ink: #14161a;
+  --muted: #6b6f76;
+  --line: rgba(20, 22, 26, 0.14);
+  --line-soft: rgba(20, 22, 26, 0.1);
+  --grid: rgba(20, 22, 26, 0.055);
+  --accent: #0e6b57;
+  --accent-hover: #0b5646;
+  --accent-text: #0e6b57;
+  --accent-soft: rgba(14, 107, 87, 0.12);
+  --accent-fg: #f4f2ec;
+  --shadow-tint: rgba(20, 22, 26, 0.35);
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #101214;
+    --paper-2: #171a1d;
+    --ink: #f4f2ec;
+    --muted: #9a9fa6;
+    --line: rgba(244, 242, 236, 0.14);
+    --line-soft: rgba(244, 242, 236, 0.1);
+    --grid: rgba(244, 242, 236, 0.05);
+    --accent-text: #4fb39a;
+    --accent-soft: rgba(79, 179, 154, 0.14);
+    --shadow-tint: rgba(0, 0, 0, 0.6);
+    color-scheme: dark;
+  }
+}
+
+@theme inline {
+  --font-sans: "Geist Variable", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-accent-text: var(--accent-text);
+  --color-accent-soft: var(--accent-soft);
+  --color-accent-fg: var(--accent-fg);
+
+  /* Fixed dark surfaces used by the Proof and Case study sections in both modes. */
+  --color-deep: #0f1a17;
+  --color-deep-ink: #14161a;
+  --color-deep-fg: #f4f2ec;
+  --color-teal-light: #4fb39a;
+
+  --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
-  @apply bg-white text-slate-700 antialiased;
+  @apply bg-paper text-ink font-sans antialiased;
+}
+
+/* Typography: no orphans in paragraphs, balanced headings. */
+p { text-wrap: pretty; }
+h1, h2, h3 { text-wrap: balance; }
+
+/* Keyboard focus: one visible ring, same accent everywhere. */
+:focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* 48px engineering grid used as the page's structural background. */
+.bg-grid {
+  background-image:
+    linear-gradient(var(--grid) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: 24px 0;
+}
+
+.bg-grid-dark {
+  background-image:
+    linear-gradient(rgba(244, 242, 236, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 242, 236, 0.045) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Cursor spotlight: a brighter teal copy of the grid revealed through a radial mask. */
+.grid-spot {
+  --mx: -9999px;
+  --my: -9999px;
+  background-image:
+    linear-gradient(rgba(14, 107, 87, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 107, 87, 0.35) 1px, transparent 1px);
+  background-size: 48px 48px;
+  background-position: 24px 0;
+  -webkit-mask-image: radial-gradient(320px circle at var(--mx) var(--my), #000 0%, transparent 70%);
+  mask-image: radial-gradient(320px circle at var(--mx) var(--my), #000 0%, transparent 70%);
+}
+
+.grid-cell {
+  --cx: 0px;
+  --cy: 0px;
+  --co: 0;
+  transform: translate(var(--cx), var(--cy));
+  opacity: var(--co);
+  transition:
+    opacity 400ms ease,
+    transform 120ms var(--ease-out-strong);
 }

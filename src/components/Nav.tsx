@@ -1,21 +1,26 @@
+import { useScroll, useMotionValueEvent } from 'motion/react'
+import { useState } from 'react'
+
 export function Nav() {
+  const { scrollY } = useScroll()
+  const [scrolled, setScrolled] = useState(false)
+  useMotionValueEvent(scrollY, 'change', (y) => setScrolled(y > 24))
+
   return (
-    <header className="sticky top-0 z-10 border-b border-slate-200 bg-white/90 backdrop-blur">
-      <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <a href="#" className="text-lg font-bold tracking-tight text-slate-900">
-          Orfa<span className="text-accent">Labs</span>
+    <header
+      className="sticky top-0 z-20 border-b bg-paper/85 backdrop-blur transition-[border-color] duration-300"
+      style={{ borderColor: scrolled ? 'var(--line)' : 'transparent' }}
+    >
+      <nav className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-6 lg:px-16">
+        <a href="#" className="text-lg font-semibold tracking-tight">
+          Orfa<span className="text-accent-text">Labs</span>
         </a>
-        <div className="flex items-center gap-6 text-sm font-medium">
-          <a href="#services" className="hidden text-slate-600 hover:text-slate-900 sm:inline">Services</a>
-          <a href="#proof" className="hidden text-slate-600 hover:text-slate-900 sm:inline">Proof</a>
-          <a href="#about" className="hidden text-slate-600 hover:text-slate-900 sm:inline">About</a>
-          <a
-            href="#contact"
-            className="rounded-md bg-accent px-3 py-1.5 text-white hover:bg-accent-hover"
-          >
-            Contact
-          </a>
-        </div>
+        <a
+          href="#contact"
+          className="font-mono text-xs tracking-[0.08em] text-accent-text uppercase border-b border-accent-text pb-0.5 transition-colors hover:text-ink hover:border-ink"
+        >
+          Contact
+        </a>
       </nav>
     </header>
   )

@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Design canvas working files (kept locally, not part of the site)
+design/
