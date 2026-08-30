@@ -21,7 +21,6 @@ const log: Array<[string, string, 'info' | 'ok' | 'warn']> = [
 ]
 
 const tone = { info: '', ok: 'text-teal-light', warn: 'text-amber-400' }
-const tags = ['go', 'scheduled', 'monitored', 'runbook']
 
 export function CaseStudy() {
   return (
@@ -48,18 +47,27 @@ export function CaseStudy() {
       <div aria-hidden className="pointer-events-none absolute inset-0 bg-deep-ink/85 lg:hidden" />
 
       <div className="relative mx-auto flex max-w-[1400px] flex-col gap-10 px-6 py-16 lg:px-16">
-        <Reveal className="flex max-w-[520px] flex-col gap-4 rounded-2xl bg-deep-fg p-7 text-deep-ink shadow-[0_40px_80px_-30px_rgba(0,0,0,0.6)] sm:p-9">
-          <p className="font-mono text-xs tracking-[0.12em] text-[#0e6b57] uppercase">Case study</p>
-          <h2 className="text-[clamp(1.75rem,2.6vw,2.25rem)] leading-[1.1] font-medium tracking-[-0.03em]">{proof.caseStudy.title}</h2>
-          <p className="text-[15px] leading-relaxed text-[#6b6f76]">{proof.caseStudy.body}</p>
-          <ul className="flex flex-wrap gap-2 font-mono text-[11px] tracking-[0.06em]">
-            {tags.map((t) => (
-              <li key={t} className="rounded-full border border-[rgba(20,22,26,0.18)] px-2.5 py-1.5">
-                {t}
-              </li>
-            ))}
-          </ul>
-        </Reveal>
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
+          {proof.caseStudies.map((cs, i) => (
+            <Reveal
+              key={cs.title}
+              delay={i * 0.1}
+              className="flex flex-col gap-4 rounded-2xl bg-deep-fg p-7 text-deep-ink shadow-[0_40px_80px_-30px_rgba(0,0,0,0.6)] sm:p-9"
+            >
+              {i === 0 && <p className="font-mono text-xs tracking-[0.12em] text-[#0e6b57] uppercase">In practice</p>}
+              {i > 0 && <p className="font-mono text-xs tracking-[0.12em] text-[#6b6f76] uppercase">{String(i + 1).padStart(2, '0')}</p>}
+              <h2 className="text-[clamp(1.75rem,2.6vw,2.25rem)] leading-[1.1] font-medium tracking-[-0.03em]">{cs.title}</h2>
+              <p className="text-[15px] leading-relaxed text-[#6b6f76]">{cs.body}</p>
+              <ul className="mt-auto flex flex-wrap gap-2 pt-2 font-mono text-[11px] tracking-[0.06em]">
+                {cs.tags.map((t) => (
+                  <li key={t} className="rounded-full border border-[rgba(20,22,26,0.18)] px-2.5 py-1.5">
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          ))}
+        </div>
         <a
           href="#contact"
           className="self-start border-b border-deep-fg/40 pb-1 text-[15px] font-medium text-deep-fg transition-colors hover:border-teal-light hover:text-teal-light"

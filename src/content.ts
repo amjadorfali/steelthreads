@@ -10,7 +10,7 @@ export const contact = {
 export const hero = {
   eyebrow: 'OrfaLabs — Independent Software Studio',
   heading: 'Custom software systems, built from scratch or wired into what you already run.',
-  sub: 'OrfaLabs designs, builds, and ships production-grade systems — new products, internal tools, integrations, and the data pipelines that keep them connected. Working code and clear outcomes, not slide decks.',
+  sub: 'OrfaLabs designs, builds, and ships production-grade systems — internal tools, integrations, the data pipelines that keep them connected, and the apps on top. Working code and clear outcomes, not slide decks.',
 }
 
 export type Package = {
@@ -61,25 +61,39 @@ export type Metric = {
   label: string
 }
 
-export const proof: { intro: string; metrics: Metric[]; caseStudy: { title: string; body: string } } = {
-  intro: '10+ years building software from scratch: internal tools, customer-facing websites, RMM software, data integrations, and infrastructure for high-volume operators.',
+export type CaseStudy = {
+  title: string
+  body: string
+  tags: string[]
+}
+
+export const proof: { intro: string; metrics: Metric[]; caseStudies: CaseStudy[] } = {
+  intro: 'Years of shipping software that businesses run on every day: the internal tools, customer-facing products, integrations, and infrastructure underneath them.',
   metrics: [
     { value: '5x', label: 'operations performance after platform revamp' },
     { value: '3x', label: 'faster delivery across 20+ cross-team contributors' },
     { value: '1,630', label: 'process errors eliminated per month' },
     { value: '6s → <1s', label: 'API response time after optimization' },
   ],
-  caseStudy: {
-    title: 'ERP ↔ warehouse sync, fully automated',
-    body: 'A Go pipeline that syncs ERP and warehouse systems on a schedule — replacing a manual export/import process and cutting reconciliation work to near zero. Monitored, logged, and documented for handover.',
-  },
+  caseStudies: [
+    {
+      title: 'Systems that agree with each other',
+      body: 'The tools your business runs on kept in sync automatically, so the same fact lives in one place — no more exporting, re-typing, or reconciling by hand. Monitored and logged, with documentation your team can actually run from.',
+      tags: ['automated', 'monitored', 'documented'],
+    },
+    {
+      title: 'AI where it actually pays off',
+      body: 'Language models built into the tools your team already uses — reading, sorting, drafting, and flagging the work that used to need a person. Triggered by real events, run only when needed, with a human able to check the source in one click.',
+      tags: ['event-driven', 'llm', 'human-in-the-loop'],
+    },
+  ],
 }
 
 export const about = {
   heading: 'A small studio for serious systems',
   body: [
-    'OrfaLabs is a lean software studio with 10+ years of experience designing, building, and shipping production-grade systems from scratch — internal tools, customer-facing websites, RMM software, data integrations, and infrastructure.',
-    'Clients work directly with the team writing the code. No account managers, no handoffs, no bloat.',
+    'OrfaLabs is a lean software studio that designs, builds, and ships production-grade systems — internal tools, customer-facing products, data integrations, and the infrastructure underneath — for businesses that run on their operations.',
+    'Clients work directly with the people writing the code. No account managers, no handoffs, no bloat.',
   ],
 }
 
