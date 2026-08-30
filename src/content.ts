@@ -8,9 +8,9 @@ export const contact = {
 }
 
 export const hero = {
-  eyebrow: 'OrfaLab — Independent Software Studio',
+  eyebrow: 'OrfaLabs — Independent Software Studio',
   heading: 'Custom software systems, built from scratch or wired into what you already run.',
-  sub: 'OrfaLab designs, builds, and ships production-grade systems — new products, internal tools, integrations, and the data pipelines that keep them connected. Working code and clear outcomes, not slide decks.',
+  sub: 'OrfaLabs designs, builds, and ships production-grade systems — new products, internal tools, integrations, and the data pipelines that keep them connected. Working code and clear outcomes, not slide decks.',
 }
 
 export type Package = {
@@ -78,7 +78,7 @@ export const proof: { intro: string; metrics: Metric[]; caseStudy: { title: stri
 export const about = {
   heading: 'A small studio for serious systems',
   body: [
-    'OrfaLab is a lean software studio with 10+ years of experience designing, building, and shipping production-grade systems from scratch — internal tools, customer-facing websites, RMM software, data integrations, and infrastructure.',
+    'OrfaLabs is a lean software studio with 10+ years of experience designing, building, and shipping production-grade systems from scratch — internal tools, customer-facing websites, RMM software, data integrations, and infrastructure.',
     'Clients work directly with the team writing the code. No account managers, no handoffs, no bloat.',
   ],
 }
