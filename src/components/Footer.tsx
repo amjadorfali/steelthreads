@@ -55,9 +55,9 @@ export function Footer() {
         {/* Footer strip */}
         <div className="flex flex-col gap-3 border-t border-line py-6 sm:flex-row sm:items-center sm:justify-between">
           <a href="#" className="text-sm font-semibold tracking-tight">
-            Orfa<span className="text-accent-text">Labs</span>
+            Steel<span className="text-accent-text">Threads</span>
           </a>
-          <p className="font-mono text-[11px] tracking-[0.06em] text-muted">© {new Date().getFullYear()} ORFALABS</p>
+          <p className="font-mono text-[11px] tracking-[0.06em] text-muted">© {new Date().getFullYear()} STEELTHREADS</p>
         </div>
       </div>
     </footer>

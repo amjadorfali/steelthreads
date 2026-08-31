@@ -3,14 +3,14 @@
 export const contact = {
   whatsapp: 'https://wa.me/96178879278',
   whatsappLabel: 'Chat on WhatsApp',
-  email: 'amjadorfali3@gmail.com',
+  email: 'hello.steelthreads@gmail.com',
   emailLabel: 'Email us instead',
 }
 
 export const hero = {
-  eyebrow: 'OrfaLabs — Independent Software Studio',
+  eyebrow: 'SteelThreads — Independent Software Studio',
   heading: 'Custom software systems, built from scratch or wired into what you already run.',
-  sub: 'OrfaLabs designs, builds, and ships production-grade systems — internal tools, integrations, the data pipelines that keep them connected, and the apps on top. Working code and clear outcomes, not slide decks.',
+  sub: 'SteelThreads designs, builds, and ships production-grade systems — internal tools, integrations, the data pipelines that keep them connected, and the apps on top. Working code and clear outcomes, not slide decks.',
 }
 
 export type Package = {
@@ -92,7 +92,7 @@ export const proof: { intro: string; metrics: Metric[]; caseStudies: CaseStudy[]
 export const about = {
   heading: 'A small studio for serious systems',
   body: [
-    'OrfaLabs is a lean software studio that designs, builds, and ships production-grade systems — internal tools, customer-facing products, data integrations, and the infrastructure underneath — for businesses that run on their operations.',
+    'SteelThreads is a lean software studio that designs, builds, and ships production-grade systems — internal tools, customer-facing products, data integrations, and the infrastructure underneath — for businesses that run on their operations.',
     'Clients work directly with the people writing the code. No account managers, no handoffs, no bloat.',
   ],
 }

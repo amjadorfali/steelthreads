@@ -13,7 +13,7 @@ export function Nav() {
     >
       <nav className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-6 lg:px-16">
         <a href="#" className="text-lg font-semibold tracking-tight">
-          Orfa<span className="text-accent-text">Labs</span>
+          Steel<span className="text-accent-text">Threads</span>
         </a>
         <a
           href="#contact"

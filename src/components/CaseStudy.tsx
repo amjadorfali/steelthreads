@@ -29,7 +29,7 @@ export function CaseStudy() {
         aria-hidden
         className="pointer-events-none absolute inset-0 overflow-hidden px-6 py-12 font-mono text-[13px] leading-[1.9] text-teal-light/55 select-none lg:px-16"
       >
-        {'$ orfasync run --job erp-warehouse --schedule "*/15 * * * *"\n'}
+        {'$ steel-sync run --job erp-warehouse --schedule "*/15 * * * *"\n'}
         {log.map(([ts, line, t], i) => (
           <span key={i} className="block">
             {ts && <span className="text-deep-fg/35">2026-08-30T{ts}</span>}
