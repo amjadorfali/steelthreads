@@ -8,9 +8,9 @@ export const contact = {
 }
 
 export const hero = {
-  eyebrow: 'SteelThreads — Independent Software Studio',
-  heading: 'Custom software systems, built from scratch or wired into what you already run.',
-  sub: 'SteelThreads designs, builds, and ships production-grade systems — internal tools, integrations, the data pipelines that keep them connected, and the apps on top. Working code and clear outcomes, not slide decks.',
+  eyebrow: 'SteelThreads — Software Consulting & Custom Development',
+  heading: 'A technical partner for businesses that outgrew their systems.',
+  sub: 'We give you straight answers on what to build, then design, build, and ship it — production-grade software, automation that removes manual work, and the apps on top. Working code and clear outcomes, not slide decks.',
 }
 
 export type Package = {
@@ -22,8 +22,19 @@ export type Package = {
 
 export const packages: Package[] = [
   {
-    title: 'Internal Ops Tools',
-    description: 'Replace the spreadsheet maze with a system built around how the team actually works.',
+    title: 'Consulting & Technical Direction',
+    description: 'Not sure what to build, or who to trust to build it? We assess your setup, make the hard calls with you, and stand behind the plan — even if someone else executes it.',
+    bullets: [
+      'Systems & process audit',
+      'Build-vs-buy & architecture calls',
+      'Roadmap with realistic estimates',
+      'Vendor & dev-team vetting',
+    ],
+    price: 'Pricing on request',
+  },
+  {
+    title: 'Custom Software',
+    description: 'Software built around how your team actually works. Replace the spreadsheet maze with one system for orders, staff, and reporting.',
     bullets: [
       'Order & operations tracking',
       'Role-based access for staff',
@@ -33,7 +44,7 @@ export const packages: Package[] = [
     price: 'Pricing on request',
   },
   {
-    title: 'Integrations & Data Sync',
+    title: 'Automation & Integrations',
     description: 'Make existing systems talk to each other. ERP, warehouse, accounting — no more manual exports or copy-paste.',
     bullets: [
       'Automated data pipelines',
@@ -92,7 +103,7 @@ export const proof: { intro: string; metrics: Metric[]; caseStudies: CaseStudy[]
 export const about = {
   heading: 'A small studio for serious systems',
   body: [
-    'SteelThreads is a lean software studio that designs, builds, and ships production-grade systems — internal tools, customer-facing products, data integrations, and the infrastructure underneath — for businesses that run on their operations.',
+    'SteelThreads is a lean software partner for businesses that run on their operations. We help you decide what to build, then design, build, and ship it — platforms, automation, data integrations, AI, and the infrastructure underneath. Or we stand behind the plan while someone else executes it.',
     'Clients work directly with the people writing the code. No account managers, no handoffs, no bloat.',
   ],
 }

@@ -70,8 +70,8 @@ function PhoneCrop() {
 }
 
 const visuals: Record<string, ReactNode> = {
-  'Internal Ops Tools': <PermsTable />,
-  'Integrations & Data Sync': <SyncDiagram />,
+  'Custom Software': <PermsTable />,
+  'Automation & Integrations': <SyncDiagram />,
   'Web & Mobile Apps': <PhoneCrop />,
 }
 
@@ -142,7 +142,7 @@ export function Packages() {
       <div className="mx-auto max-w-[1400px] px-6 pt-24 pb-24 lg:px-16 lg:pt-32">
         <div className="mb-12 flex items-center gap-3">
           <span className="h-[9px] w-[9px] rounded-full bg-accent" aria-hidden />
-          <h2 className="font-mono text-xs tracking-[0.12em] text-muted uppercase">What we build</h2>
+          <h2 className="font-mono text-xs tracking-[0.12em] text-muted uppercase">How we help</h2>
         </div>
         <div>
           {packages.map((p, i) => (
