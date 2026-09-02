@@ -114,14 +114,6 @@ export const proof: { intro: string; metrics: Metric[]; caseStudies: CaseStudy[]
   ],
 }
 
-export const about = {
-  heading: 'A small studio for serious systems',
-  body: [
-    'SteelThreads is a lean software partner for businesses that run on their operations. We help you decide what to build, then design, build, and ship it — platforms, automation, data integrations, AI, and the infrastructure underneath. Or we stand behind the plan while someone else executes it.',
-    'Clients work directly with the people writing the code. No account managers, no handoffs, no bloat.',
-  ],
-}
-
 export const cta = {
   heading: 'Tell us what\'s slowing your team down.',
   sub: 'A short WhatsApp message is enough to start. Replies within 24 hours.',
