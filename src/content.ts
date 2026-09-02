@@ -29,6 +29,7 @@ export const packages: Package[] = [
       'Build-vs-buy & architecture calls',
       'Roadmap with realistic estimates',
       'Vendor & dev-team vetting',
+      'Code & architecture review',
     ],
     price: 'Pricing on request',
   },
@@ -39,6 +40,7 @@ export const packages: Package[] = [
       'Order & operations tracking',
       'Role-based access for staff',
       'Reports & live dashboards',
+      'Full history of every change',
       'Training + handover docs',
     ],
     price: 'Pricing on request',
@@ -50,7 +52,19 @@ export const packages: Package[] = [
       'Automated data pipelines',
       'Scheduled or real-time sync',
       'Error monitoring & alerts',
+      'AI built in where it pays off',
       'Runbook & documentation',
+    ],
+    price: 'Pricing on request',
+  },
+  {
+    title: 'Fixing What You Already Have',
+    description: 'Something slow, fragile, or built on technology nobody wants to touch? We work on systems already in production, without stopping the business to do it.',
+    bullets: [
+      'Find and fix what is slow',
+      'Move off ageing technology',
+      'Make fragile systems dependable',
+      'Checks that catch problems early',
     ],
     price: 'Pricing on request',
   },
@@ -79,7 +93,7 @@ export type CaseStudy = {
 }
 
 export const proof: { intro: string; metrics: Metric[]; caseStudies: CaseStudy[] } = {
-  intro: 'Years of shipping software that businesses run on every day: the internal tools, customer-facing products, integrations, and infrastructure underneath them.',
+  intro: 'Years of shipping software that businesses run on every day: the internal tools, customer-facing products, integrations, and infrastructure underneath them — built from scratch, or repaired and extended while they stayed in use.',
   metrics: [
     { value: '5x', label: 'operations performance after platform revamp' },
     { value: '3x', label: 'faster delivery across 20+ cross-team contributors' },

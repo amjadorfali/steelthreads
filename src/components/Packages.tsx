@@ -91,6 +91,7 @@ function StackCard({
   nextRef?: RefObject<HTMLElement | null>
 }) {
   const reduce = useReducedMotion()
+  const visual = visuals[pkg.title]
 
   // Shrink this card as the NEXT card travels from the viewport bottom up to the pin line.
   const { scrollYProgress } = useScroll({ target: nextRef, offset: ['start end', `start ${TOP}px`] })
@@ -112,7 +113,7 @@ function StackCard({
       {animate && (
         <motion.div aria-hidden className="pointer-events-none absolute inset-0 bg-paper" style={{ opacity: veil }} />
       )}
-      <div className="flex flex-col gap-5 lg:col-span-7">
+      <div className={`flex flex-col gap-5 ${visual ? 'lg:col-span-7' : 'lg:col-span-11'}`}>
         <h3 className="text-[clamp(1.75rem,2.6vw,2.25rem)] leading-[1.1] font-medium tracking-[-0.025em]">{pkg.title}</h3>
         <p className="max-w-[520px] text-lg leading-relaxed text-muted text-pretty">{pkg.description}</p>
         <ul className="grid grid-cols-1 gap-2.5 text-sm sm:grid-cols-2">
@@ -130,7 +131,7 @@ function StackCard({
           {pkg.price} →
         </a>
       </div>
-      <div className="flex items-end justify-center lg:col-span-5 lg:justify-end">{visuals[pkg.title]}</div>
+      {visual && <div className="flex items-end justify-center lg:col-span-5 lg:justify-end">{visual}</div>}
     </motion.article>
   )
 }
