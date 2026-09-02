@@ -29,3 +29,4 @@ design/
 # Logo working files (concepts, iterations, sheets); final variants live in logos/export
 logos/*
 !logos/export/
+brand/

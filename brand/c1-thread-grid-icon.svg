@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">SteelThreads mark: one thread through every node</title>
-  <g fill="#14161A">
-    <circle cx="12" cy="12" r="3.2"/><circle cx="32" cy="12" r="3.2"/><circle cx="52" cy="12" r="3.2"/>
-    <circle cx="12" cy="32" r="3.2"/><circle cx="32" cy="32" r="3.2"/><circle cx="52" cy="32" r="3.2"/>
-    <circle cx="12" cy="52" r="3.2"/><circle cx="32" cy="52" r="3.2"/><circle cx="52" cy="52" r="3.2"/>
-  </g>
-  <path d="M2 12H52V32H12V52H62" fill="none" stroke="#0E6B57" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>

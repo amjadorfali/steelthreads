@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">SteelThreads mark: a thread straight through the system</title>
-  <rect x="17" y="17" width="30" height="30" rx="5" fill="none" stroke="#14161A" stroke-width="3.5"/>
-  <path d="M8 32H56" fill="none" stroke="#0E6B57" stroke-width="3.5" stroke-linecap="round"/>
-  <circle cx="8" cy="32" r="4.5" fill="#0E6B57"/>
-  <circle cx="56" cy="32" r="4.5" fill="#0E6B57"/>
-</svg>
