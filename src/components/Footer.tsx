@@ -1,6 +1,7 @@
 import { ArrowUpRight } from '@phosphor-icons/react'
 import { contact, cta } from '../content'
 import { GridSpotlight } from './GridSpotlight'
+import { Mark } from './Mark'
 import { Reveal } from './Reveal'
 
 // Human-readable forms of the contact details in content.ts.
@@ -54,8 +55,11 @@ export function Footer() {
 
         {/* Footer strip */}
         <div className="flex flex-col gap-3 border-t border-line py-6 sm:flex-row sm:items-center sm:justify-between">
-          <a href="#" className="text-sm font-semibold tracking-tight">
-            Steel<span className="text-accent-text">Threads</span>
+          <a href="#" className="flex items-center gap-2 text-sm font-semibold tracking-tight">
+            <Mark size={20} />
+            <span>
+              Steel<span className="text-accent-text">Threads</span>
+            </span>
           </a>
           <p className="font-mono text-[11px] tracking-[0.06em] text-muted">© {new Date().getFullYear()} STEELTHREADS</p>
         </div>

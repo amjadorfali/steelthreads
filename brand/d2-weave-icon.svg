@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="t"><title id="t">SteelThreads mark: woven lattice with one thread through the middle</title>
+  <g fill="none" stroke="#14161A" stroke-width="4" stroke-linecap="round">
+    <path d="M8 20H26M38 20H56"/>
+    <path d="M8 32H14M26 32H38M50 32H56"/>
+    <path d="M8 44H26M38 44H56"/>
+    <path d="M20 8V14M20 26V38M20 50V56"/>
+    <path d="M44 8V14M44 26V38M44 50V56"/>
+  </g>
+  <path d="M32 8V26M32 38V56" fill="none" stroke="#0E6B57" stroke-width="4" stroke-linecap="round"/>
+</svg>

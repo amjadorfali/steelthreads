@@ -25,3 +25,7 @@ dist-ssr
 
 # Design canvas working files (kept locally, not part of the site)
 design/
+
+# Logo working files (concepts, iterations, sheets); final variants live in logos/export
+logos/*
+!logos/export/

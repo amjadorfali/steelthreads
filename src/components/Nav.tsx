@@ -1,5 +1,6 @@
 import { useScroll, useMotionValueEvent } from 'motion/react'
 import { useState } from 'react'
+import { Mark } from './Mark'
 
 export function Nav() {
   const { scrollY } = useScroll()
@@ -12,8 +13,11 @@ export function Nav() {
       style={{ borderColor: scrolled ? 'var(--line)' : 'transparent' }}
     >
       <nav className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-6 lg:px-16">
-        <a href="#" className="text-lg font-semibold tracking-tight">
-          Steel<span className="text-accent-text">Threads</span>
+        <a href="#" className="flex items-center gap-2.5 text-lg font-semibold tracking-tight">
+          <Mark size={26} />
+          <span>
+            Steel<span className="text-accent-text">Threads</span>
+          </span>
         </a>
         <a
           href="#contact"
