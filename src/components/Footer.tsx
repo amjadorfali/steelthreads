@@ -62,7 +62,18 @@ export function Footer() {
               Steel<span className="text-accent-text">Threads</span>
             </span>
           </a>
-          <p className="font-mono text-[11px] tracking-[0.06em] text-muted">© {new Date().getFullYear()} STEELTHREADS</p>
+          <div className="flex items-center gap-4">
+            <a
+              href={contact.linkedin}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex h-8 items-center gap-1.5 rounded-full border border-line px-3 font-mono text-[11px] tracking-[0.06em] text-muted transition-[border-color,color,background-color,transform] duration-150 hover:border-accent-text hover:bg-accent-soft hover:text-accent-text active:scale-[0.97]"
+            >
+              LinkedIn
+              <ArrowUpRight size={13} weight="bold" />
+            </a>
+            <p className="font-mono text-[11px] tracking-[0.06em] text-muted">© {new Date().getFullYear()} STEELTHREADS</p>
+          </div>
         </div>
       </div>
     </footer>

@@ -7,6 +7,7 @@ export const contact = {
   bookingLabel: 'Book an appointment',
   email: 'hello.steelthreads@gmail.com',
   emailLabel: 'Email us instead',
+  linkedin: 'https://www.linkedin.com/company/steelthreads/',
 }
 
 export const hero = {
