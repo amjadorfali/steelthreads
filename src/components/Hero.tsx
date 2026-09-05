@@ -105,6 +105,14 @@ export function Hero() {
             {contact.whatsappLabel}
           </a>
           <a
+            href={contact.booking}
+            target="_blank"
+            rel="noopener"
+            className="inline-flex h-12 items-center rounded-full border border-accent-text px-6 text-[15px] font-medium text-accent-text transition-[background-color,transform] duration-150 ease-out-strong hover:bg-accent-soft active:scale-[0.97]"
+          >
+            {contact.bookingLabel}
+          </a>
+          <a
             href={`mailto:${contact.email}`}
             className="text-[15px] font-medium text-ink transition-colors hover:text-accent-text"
           >

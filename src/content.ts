@@ -3,6 +3,8 @@
 export const contact = {
   whatsapp: 'https://wa.me/96178879278',
   whatsappLabel: 'Chat on WhatsApp',
+  booking: 'https://calendar.app.google/ewt9C1tHjFP9k7oF9',
+  bookingLabel: 'Book an appointment',
   email: 'hello.steelthreads@gmail.com',
   emailLabel: 'Email us instead',
 }

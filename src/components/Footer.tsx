@@ -9,6 +9,7 @@ const phone = '+961 78 879 278'
 
 const channels = [
   { label: 'WhatsApp', value: phone, href: contact.whatsapp, external: true, primary: true },
+  { label: 'Appointment', value: contact.bookingLabel, href: contact.booking, external: true, primary: false },
   { label: 'Email', value: contact.email, href: `mailto:${contact.email}`, external: false, primary: false },
 ]
 
